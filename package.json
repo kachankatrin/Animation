@@ -1,0 +1,23 @@
+{
+  "name": "front-end-lessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass saas/base.scss css/index.css",
+    "css:watch": "npm run compile:scss && npm run compile:scss -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kachankatrin/Animation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kachankatrin/Animation/issues"
+  },
+  "homepage": "https://github.com/kachankatrin/Animation#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
