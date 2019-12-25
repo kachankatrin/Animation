@@ -1,0 +1,71 @@
+.section-5 {
+  background-image: linear-gradient(to right, rgb(126, 213, 111), rgb(40, 180, 133));
+  padding: 10rem 0;
+  .booking {
+    position: relative;
+    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
+    height: 70vh;
+    background-size: cover; 
+    padding: 5rem;
+    .skewed-title {
+      margin: 0 0 5rem 0;
+      font-size: 2.5rem;
+    }
+    .fieldset {
+      position: absolute;
+      border: none;
+      width: 35%;
+      height: 60%;
+      .input {
+        display: flex;
+        flex-flow: column;
+        height: 50%;
+        justify-content: space-between;
+        .inp {
+          height: 4.5rem;
+          border: none;
+          border-radius: 2px;
+          padding-left: 2rem;
+        }
+      }
+      .check {
+        width: 100%;
+        margin: 4rem 0 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        p > input {
+          appearance: none;
+          -webkit-appearance: none;
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          border: 3px solid #55c57a;
+        }
+        input:checked {
+          position: relative;
+        }
+        input:checked:before {
+          top: 0;
+          left: 0;
+          transform: translate(-16%, -16%);
+          height: 2rem;
+          width: 2rem;
+          position: absolute;
+          content: '';
+          background-color: #55c57a;
+          clip-path: circle(20% at 50% 50%);
+          // z-index: -1;
+        }
+        label{
+          vertical-align: top;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+  input::placeholder, label {
+    font-size: 1.1rem;
+    font-family: Lato;
+    color: #777;
+  }
+}

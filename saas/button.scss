@@ -1,8 +1,8 @@
 @mixin button-style {
   margin-top: 30px;
-	border-radius: 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
 	text-decoration: none;
-	color: grey;
 	padding: 10px 30px;
 	background-color: rgb(255, 255, 255);
 	display: inline-block;
@@ -17,7 +17,18 @@
 	z-index: 5; */
 }
 
+%button {
+  text-decoration: none;
+  color: #55c57a;
+  display: inline-block;
+  padding: 4px;
+  border-bottom: 1px solid #55c57a;
+  margin-top: 2rem;
+  padding: 3px 4px;
+}
+
 .btn {
+  @include button-style;
   &:link {
     @include button-style;
   }
@@ -25,10 +36,20 @@
     @include button-style;
   }
   &-white {
+    color: grey;
     background-color: white;
     &::after {
       background-color: white;
     }
+  }
+  &-green, &-green:link, &-green:visited {
+    background-color: #55c57a;
+    color: white;
+    animation-name: none;
+  }
+  &-green::after {
+    color: white;
+    background-color: #55c57a;
   }
 &:hover {
   transform: translateY(-5px);
@@ -59,4 +80,23 @@
   padding: 15px 30px;
   margin-bottom: 25%;
   background-color: white;
+}
+
+.btn-more:visited {
+  @extend %button;
+}
+.btn-more:link {
+  @extend %button;
+}
+.btn-more:hover{
+  background-color:  #55c57a;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+.btn-more:active {
+  transform: translateY(2px);
+}
+.btn-more {
+  transition: all 0.2s;
 }
